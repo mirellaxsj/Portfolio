@@ -27,5 +27,14 @@ const animator = new TextAnimator('.text-blob', {
     delay: 100,
     class: "text-blob__letter"
 });
+
+
 animator.animate();
+
+document.querySelector('.text-blob').addEventListener('mouseover', () => {
+    document.querySelector('.text-blob').innerHTML = ''
+    animator.animate();
+})
+
+
 
